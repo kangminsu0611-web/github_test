@@ -60,21 +60,30 @@ def find_image_files(folder_path: str) -> List[str]:
     return image_files
 
 
-def get_next_count_path(directory: str, base: str) -> str:
-    """다음 카운트 번호를 가진 파일 경로를 생성합니다."""
+def get_next_count_path(result_root: str, target_dir: str, base: str) -> str:
+    """다음 카운트 번호를 가진 파일 경로를 생성합니다.
+
+    동작: result_root 아래(OK/NG/JSON 포함)의 모든 파일을 검사하여 동일한 base 이름으로 생성된
+    최대 인덱스를 찾고, 그 다음 인덱스로 파일명을 만듭니다. 이렇게 하면 OK/NG 폴더 구분과
+    관계없이 결과 이미지들이 항상 동일한 전역 인덱스를 공유하게 됩니다.
+    """
     import re
-    pattern = re.compile(re.escape(base) + r"_result_(\d+)\.jpg$")
+    pattern = re.compile(re.escape(base) + r"_result_(\d+)\.(jpg|jpeg|png|json)$", re.IGNORECASE) # jpg
     max_idx = 0
-    for name in os.listdir(directory):
-        m = pattern.match(name)
-        if m:
-            try:
-                idx = int(m.group(1))
-                if idx > max_idx:
-                    max_idx = idx
-            except ValueError:
-                pass
-    return os.path.join(directory, f"{base}_result_{max_idx + 1:04d}.jpg")
+
+    if os.path.exists(result_root):
+        for root, _, files in os.walk(result_root):
+            for name in files:
+                m = pattern.match(name)
+                if m:
+                    try:
+                        idx = int(m.group(1))
+                        if idx > max_idx:
+                            max_idx = idx
+                    except ValueError:
+                        pass
+
+    return os.path.join(target_dir, f"{base}_result_{max_idx + 1:04d}.jpg")
 
 
 def process_single_image(inspector: MissingPartInspector, image_path: str, method: str, 
@@ -100,7 +109,7 @@ def process_single_image(inspector: MissingPartInspector, image_path: str, metho
     base_name = os.path.splitext(os.path.basename(image_path))[0]
     target_dir = ng_dir if final_label == "NG" else ok_dir
     
-    image_out_path = get_next_count_path(target_dir, base_name)
+    image_out_path = get_next_count_path(result_root, target_dir, base_name)
     json_out_path = os.path.join(json_dir, os.path.splitext(os.path.basename(image_out_path))[0] + ".json")
     
     # 시각화 결과 저장
