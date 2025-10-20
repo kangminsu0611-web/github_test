@@ -1,0 +1,217 @@
+{
+  "image_path": "C:\\Users\\pc\\Desktop\\vison_samco_test\\test_data\\test7.jpg",
+  "method": "combined",
+  "threshold": 0.5,
+  "roi_results": [
+    {
+      "roi_id": 1,
+      "coordinates": [
+        192,
+        15,
+        38,
+        45
+      ],
+      "similarity": 0.6778954529070512,
+      "scores": {
+        "orb": 0.42415800423393835,
+        "template": 0.8316162427266439,
+        "hist": 1.0,
+        "ssim": 0.4424165626460639,
+        "edge": 0.27216494845360817
+      },
+      "is_ok": true,
+      "result": "OK"
+    },
+    {
+      "roi_id": 2,
+      "coordinates": [
+        245,
+        13,
+        44,
+        46
+      ],
+      "similarity": 0.7532945378925733,
+      "scores": {
+        "orb": 0.6655812409886028,
+        "template": 0.8721136972308159,
+        "hist": 1.0,
+        "ssim": 0.5265705388668133,
+        "edge": 0.29558599695585996
+      },
+      "is_ok": true,
+      "result": "OK"
+    },
+    {
+      "roi_id": 3,
+      "coordinates": [
+        308,
+        14,
+        44,
+        50
+      ],
+      "similarity": 0.624951330609455,
+      "scores": {
+        "orb": 0.0,
+        "template": 0.8859714070955912,
+        "hist": 1.0,
+        "ssim": 0.5388438343162948,
+        "edge": 0.2833333333333333
+      },
+      "is_ok": true,
+      "result": "OK"
+    },
+    {
+      "roi_id": 4,
+      "coordinates": [
+        370,
+        16,
+        42,
+        55
+      ],
+      "similarity": 0.720866917430441,
+      "scores": {
+        "orb": 0.5287576698664664,
+        "template": 0.8798246333996455,
+        "hist": 1.0,
+        "ssim": 0.48201893266135565,
+        "edge": 0.28865153538050725
+      },
+      "is_ok": true,
+      "result": "OK"
+    },
+    {
+      "roi_id": 5,
+      "coordinates": [
+        425,
+        16,
+        46,
+        48
+      ],
+      "similarity": 0.7238287412203864,
+      "scores": {
+        "orb": 0.6109590301518726,
+        "template": 0.8637605706850687,
+        "hist": 1.0,
+        "ssim": 0.4522551791898272,
+        "edge": 0.24670487106017194
+      },
+      "is_ok": true,
+      "result": "OK"
+    },
+    {
+      "roi_id": 6,
+      "coordinates": [
+        430,
+        337,
+        47,
+        51
+      ],
+      "similarity": 0.7419990052021143,
+      "scores": {
+        "orb": 0.5191685871543722,
+        "template": 0.8877937768896421,
+        "hist": 1.0,
+        "ssim": 0.5811876538788706,
+        "edge": 0.3464900662251655
+      },
+      "is_ok": true,
+      "result": "OK"
+    },
+    {
+      "roi_id": 7,
+      "coordinates": [
+        364,
+        332,
+        53,
+        58
+      ],
+      "similarity": 0.7629707217005031,
+      "scores": {
+        "orb": 0.5201388524144109,
+        "template": 0.9242260530591011,
+        "hist": 1.0,
+        "ssim": 0.6329504337370432,
+        "edge": 0.3673257023933403
+      },
+      "is_ok": true,
+      "result": "OK"
+    },
+    {
+      "roi_id": 8,
+      "coordinates": [
+        309,
+        348,
+        50,
+        46
+      ],
+      "similarity": 0.7314743462462066,
+      "scores": {
+        "orb": 0.7031565051443771,
+        "template": 0.8823273827632269,
+        "hist": 0.8899470980538745,
+        "ssim": 0.49864864254149044,
+        "edge": 0.2886075949367088
+      },
+      "is_ok": true,
+      "result": "OK"
+    },
+    {
+      "roi_id": 9,
+      "coordinates": [
+        243,
+        348,
+        54,
+        45
+      ],
+      "similarity": 0.7467085769610502,
+      "scores": {
+        "orb": 0.6047976955801708,
+        "template": 0.9060464575886726,
+        "hist": 1.0,
+        "ssim": 0.5405916864090753,
+        "edge": 0.228463476070529
+      },
+      "is_ok": true,
+      "result": "OK"
+    },
+    {
+      "roi_id": 10,
+      "coordinates": [
+        185,
+        350,
+        54,
+        41
+      ],
+      "similarity": 0.7612710016905899,
+      "scores": {
+        "orb": 0.6125035280514035,
+        "template": 0.8954556062817574,
+        "hist": 1.0,
+        "ssim": 0.5868851590643166,
+        "edge": 0.32100840336134456
+      },
+      "is_ok": true,
+      "result": "OK"
+    },
+    {
+      "roi_id": 11,
+      "coordinates": [
+        448,
+        167,
+        45,
+        143
+      ],
+      "similarity": 0.7058857090412272,
+      "scores": {
+        "orb": 0.5402517959095194,
+        "template": 0.8030412594477335,
+        "hist": 1.0,
+        "ssim": 0.4689269845008092,
+        "edge": 0.36583924349881797
+      },
+      "is_ok": true,
+      "result": "OK"
+    }
+  ],
+  "overall_result": "OK"
+}
